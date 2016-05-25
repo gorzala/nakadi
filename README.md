@@ -161,7 +161,7 @@ This example shows a `business` category event type with a simple schema for an
 order number -
 
 ```sh
-curl -v -XPOST http://localhost:8080/event-types -d '{
+curl -v -XPOST --header "Content-Type:application/json" http://localhost:8080/event-types -d '{
   "name": "order.ORDER_RECEIVED",
   "owning_application": "order-service",
   "category": "business",
@@ -177,7 +177,7 @@ curl -v -XPOST http://localhost:8080/event-types -d '{
 This example shows an `undefined` category event type with a wilcard schema -
 
 ```sh
-curl -v -XPOST http://localhost:8080/event-types -d '{
+curl -v -XPOST --header "Content-Type:application/json" http://localhost:8080/event-types -d '{
   "name": "undef",
   "owning_application": "jinteki",
   "category": "undefined",
